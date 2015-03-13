@@ -3,4 +3,13 @@ machine:
     version: 5.5.11
 test:
   override:
-    - echo "No tests to run, juhu!"
+    - echo "No tests to run juhu!"
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./deploy_prod.sh
+  production:
+    branch: dev
+    commands:
+      - ./deploy_dev.sh
